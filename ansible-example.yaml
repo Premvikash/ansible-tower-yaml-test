@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  become: yes
   vars:
     http_port: 80
     max_clients: 200
