@@ -9,6 +9,7 @@
       name: httpd
       state: latest
     become: yes
+    become_method: sudo
   - name: write the apache config file
     template:
       src: file-only/httpd.j2
