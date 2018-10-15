@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  sudo: true
   vars:
     http_port: 80
     max_clients: 200
@@ -9,7 +10,6 @@
       name: httpd
       state: latest
     become: yes
-    become_method: sudo
   - name: write the apache config file
     template:
       src: file-only/httpd.j2
